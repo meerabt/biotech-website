@@ -4,102 +4,88 @@ import React from "react";
 import Image from "next/image";
 import { routes } from "@/lib/route";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import GradientHeading from "@/components/gradient";
+
+// Animation variants
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number],
+    },
+  },
+};
+
+// Product data with descriptions
+const products = [
+  {
+    image: "/home/grid/medical.jpg",
+    alt: "Medical Equipment",
+    description:
+      "Explore our range of medical equipment including surgical tools, diagnostic devices, and patient monitoring systems.",
+  },
+  {
+    image: "/home/grid/science.jpg",
+    alt: "Scientific Equipment",
+    description:
+      "Browse our collection of scientific instruments, lab tools, and analytical devices designed for research and innovation.",
+  },
+];
 
 const HomeGrid = () => {
   return (
-    <div>
-      <section className="max-w-7xl mx-auto px-4 py-10 text-primarydark">
+    <div className="bg-white p-3 ">
+      <section className="max-w-7xl  mx-auto py-10 text-primarydark rounded-xl">
         <Link href={routes.products}>
-          <h2 className="text-2xl font-bold hover:text-primarylight">
-            Our Products
-          </h2>
+          <GradientHeading className="text-2xl mb-6">
+            Our Products & Services
+          </GradientHeading>
         </Link>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div className="bg-white p-4 rounded-md shadow">
-            <Image
-              src="/home/grid/oxygen.jpg"
-              alt="Oxygen Concentrator"
-              width={400}
-              height={300}
-              className="object-cover w-full h-48 mb-4"
-            />
-            <h3 className="font-semibold">Oxygen Concentrator</h3>
-            <p className="text-sm text-gray-600 mt-2">
-              Oxygen concentrator solutions
-            </p>
-          </div>
-
-          <div className="bg-white p-4 rounded-md shadow">
-            <Image
-              src="/home/grid/healthcare.jpg"
-              alt="Health Care"
-              width={400}
-              height={300}
-              className="object-cover w-full h-48 mb-4"
-            />
-            <h3 className="font-semibold">Health Care</h3>
-            <p className="text-sm text-gray-600 mt-2">
-              Experts health care equipments
-            </p>
-          </div>
-
-          <div className="bg-white p-4 rounded-md shadow">
-            <Image
-              src="/home/grid/medical.jpg"
-              alt="Medical Equipment"
-              width={400}
-              height={300}
-              className="object-cover w-full h-48 mb-4"
-            />
-            <h3 className="font-semibold">Medical Equipment</h3>
-            <p className="text-sm text-gray-600 mt-2">
-              One-stop solution for medical equipment repair and services
-            </p>
-          </div>
-
-          <div className="bg-white p-4 rounded-md shadow">
-            <Image
-              src="/home/grid/physio.jpg"
-              alt="Physiotherapy Equipment"
-              width={400}
-              height={300}
-              className="object-cover w-full h-48 mb-4"
-            />
-            <h3 className="font-semibold">Physiotherapy Equipment</h3>
-            <p className="text-sm text-gray-600 mt-2">
-              Physiotherapy equipments maintanence
-            </p>
-          </div>
-
-          <div className="bg-white p-4 rounded-md shadow">
-            <Image
-              src="/home/grid/science.jpeg"
-              alt="Scientific Equipment"
-              width={400}
-              height={300}
-              className="object-cover w-full h-48 mb-4"
-            />
-            <h3 className="font-semibold">Scientific Equipment</h3>
-            <p className="text-sm text-gray-600 mt-2">
-              Scientific equipments maintanence
-            </p>
-          </div>
-
-          <div className="bg-white p-4 rounded-md shadow">
-            <Image
-              src="/home/grid/labs.png"
-              alt="Laboratory Equipment"
-              width={400}
-              height={300}
-              className="object-cover w-full h-48 mb-4"
-            />
-            <h3 className="font-semibold">Laboratory Equipment</h3>
-            <p className="text-sm text-gray-600 mt-2">
-              Laboratory equipments maintanence
-            </p>
-          </div>
-        </div>
+        <motion.div
+          className="space-y-8  mb-20"
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+        >
+          {products.map((product, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              className="flex flex-col sm:flex-row sm:h-[300px]  gap-6 bg-gray-50 p-4 rounded-md shadow-xl cursor-pointer border border-gray-200"
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            >
+              <div className="sm:w-[400px] w-full">
+                <Image
+                  src={product.image}
+                  alt={product.alt}
+                  width={500}
+                  height={300}
+                  className="object-cover w-full h-full rounded-md"
+                />
+              </div>
+              <div className="sm:w-1/2 w-full flex items-center">
+                <p className="text-primarydark text-base leading-relaxed">
+                  {product.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </section>
     </div>
   );
