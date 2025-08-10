@@ -27,9 +27,9 @@ export default function ContactInfo() {
   return (
     <div className="bg-white h-screen px-4 py-12">
       <div className="max-w-3xl mx-auto shadow-md p-6 rounded-xl">
-        <h2 className="text-2xl font-bold text-center mb-4">
+        <div className="text-2xl font-bold text-center mb-4">
           <GradientHeading useCustomGradient>Contact Us</GradientHeading>
-        </h2>
+        </div>
 
         <div className="text-center space-y-2 mb-6">
           <p

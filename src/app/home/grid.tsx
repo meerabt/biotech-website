@@ -51,7 +51,7 @@ const HomeGrid = () => {
       <section className="max-w-7xl  mx-auto py-10 text-primarydark rounded-xl">
         <Link href={routes.products}>
           <GradientHeading className="text-2xl mb-6">
-            Our Products & Services
+            Our Products
           </GradientHeading>
         </Link>
 
