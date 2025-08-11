@@ -5,6 +5,7 @@ import Image from "next/image";
 import HomeGrid from "./grid";
 import { CheckCircle } from "lucide-react";
 import GradientHeading from "@/components/gradient";
+import InfiniteCarousel from "@/components/carousel";
 
 const services = [
   "Medical equipment repair and service",
@@ -17,6 +18,21 @@ const services = [
   "Customisation",
   "Pharmaceuticals equipment repair and service",
   "High efficiency industrial burner repair and service",
+];
+
+const images = [
+  { src: "/carousel/one.jpg", alt: "Medical Equipment" },
+  { src: "/carousel/two.jpg", alt: "Medical Equipment" },
+  { src: "/carousel/three.jpg", alt: "Medical Equipment" },
+  { src: "/carousel/fout.jpg", alt: "Medical Equipment" },
+  { src: "/carousel/five.jpg", alt: "Medical Equipment" },
+  { src: "/carousel/six.jpg", alt: "Medical Equipment" },
+  { src: "/carousel/seven.jpg", alt: "Medical Equipment" },
+  { src: "/carousel/eight.jpg", alt: "Medical Equipment" },
+  { src: "/carousel/nine.jpg", alt: "Medical Equipment" },
+  { src: "/carousel/ten.jpg", alt: "Medical Equipment" },
+  { src: "/carousel/eleven.jpg", alt: "Medical Equipment" },
+  { src: "/carousel/twelve.jpg", alt: "Medical Equipment" },
 ];
 
 const Main = () => {
@@ -52,7 +68,7 @@ const Main = () => {
           ))}
         </div>
       </section>
-
+      <InfiniteCarousel images={images} speed={60} />
       <HomeGrid />
     </div>
   );

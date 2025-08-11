@@ -1,93 +1,69 @@
 "use client";
 
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Tabs from "@/components/tabs";
-import { useState } from "react";
-import ProductCard from "./productCard";
 import GradientHeading from "@/components/gradient";
-
-const categories = [
-  {
-    name: "Medical Products",
-    products: [
-      {
-        image: "/images/diagnostic-kit.jpg",
-        title: "Advanced Diagnostic Kit",
-        description:
-          "High-accuracy diagnostic kit for early disease detection.",
-      },
-      {
-        image: "/images/surgical-tools.jpg",
-        title: "Precision Surgical Tools",
-        description:
-          "Ergonomically designed surgical tools for precision procedures.",
-      },
-      {
-        image: "/images/patient-monitor.jpg",
-        title: "Patient Monitoring System",
-        description:
-          "Real-time patient monitoring system with wireless sensors.",
-      },
-    ],
-  },
-  {
-    name: "Science Lab Equipments",
-    products: [
-      {
-        image: "/images/sensor-device.jpg",
-        title: "Digital Lab Sensor",
-        description: "Accurate readings for laboratory experiments.",
-      },
-      {
-        image: "/images/centrifuge.jpg",
-        title: "Centrifuge Machine",
-        description: "High-speed centrifuge for sample separation.",
-      },
-      {
-        image: "/images/analyzer.jpg",
-        title: "Automated Analyzer",
-        description: "Fully automated sample analysis system.",
-      },
-    ],
-  },
-];
+import MedicalCard from "./medicalCard";
+import LabCard from "./labCard";
+import labEquipments from "@/data/labData";
+import medicalProducts from "@/data/medicalData";
 
 export default function ProductsPage() {
-  const [activeTab, setActiveTab] = useState("Medical");
+  const searchParams = useSearchParams();
+  const tabParam = searchParams.get("tab");
 
-  const filteredCategory =
-    activeTab === "Medical"
-      ? categories.find((cat) => cat.name === "Medical Products")
-      : categories.find((cat) => cat.name === "Science Lab Equipments");
+  const [activeTab, setActiveTab] = useState("Medical Equipments");
+
+  // Set initial tab from query
+  useEffect(() => {
+    if (
+      tabParam &&
+      (tabParam === "Medical Equipments" || tabParam === "Lab Equipments")
+    ) {
+      setActiveTab(tabParam);
+    }
+  }, [tabParam]);
+
+  const isMedicalTab = activeTab === "Medical Equipments";
+  const products = isMedicalTab ? medicalProducts : labEquipments;
 
   return (
-    <main className=" mx-auto px-6 py-12 bg-white sm:px-20 sm:py-10">
+    <main className="mx-auto px-6 py-12 bg-white sm:px-20 sm:py-10">
       <GradientHeading useCustomGradient className="text-3xl mb-6">
         Our Products
       </GradientHeading>
 
       <Tabs
-        tabs={["Medical", "Science Lab Equipments"]}
+        tabs={["Medical Equipments", "Lab Equipments"]}
         activeTab={activeTab}
         onTabClick={setActiveTab}
       />
 
-      {filteredCategory && (
-        <section className="mb-12">
-          <h2 className="text-xl font-semibold mb-6 text-primarydark">
-            {filteredCategory.name}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-            {filteredCategory.products.map((product) => (
-              <ProductCard
+      <section className="mb-12">
+        <h2 className="text-xl font-semibold mb-6 text-primarydark">
+          {isMedicalTab ? "Medical Products" : " Lab Products"}
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {products.map((product) =>
+            isMedicalTab ? (
+              <MedicalCard
                 key={product.title}
                 image={product.image}
                 title={product.title}
                 description={product.description}
               />
-            ))}
-          </div>
-        </section>
-      )}
+            ) : (
+              <LabCard
+                key={product.title}
+                image={product.image}
+                title={product.title}
+                description={product.description}
+              />
+            )
+          )}
+        </div>
+      </section>
     </main>
   );
 }
