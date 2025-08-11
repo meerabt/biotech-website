@@ -51,7 +51,7 @@ const Main = () => {
           </div>
         </section>
       </main>
-
+      <InfiniteCarousel images={images} speed={60} />
       <section className="sm:px-20 sm:py-10 mx-auto px-4 py-10 bg-white">
         <GradientHeading className="text-2xl mb-8">
           Our Services
@@ -68,7 +68,7 @@ const Main = () => {
           ))}
         </div>
       </section>
-      <InfiniteCarousel images={images} speed={60} />
+
       <HomeGrid />
     </div>
   );

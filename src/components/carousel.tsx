@@ -53,7 +53,7 @@ export default function InfiniteCarousel({
         {[...images, ...images].map((img, index) => (
           <div
             key={index}
-            className="relative w-60 h-52 flex-shrink-0 m-2 rounded-lg overflow-hidden shadow-md "
+            className="relative w-60 h-52 flex-shrink-0 m-2 rounded-lg overflow-hidden shadow-md mt-5"
           >
             <Image
               src={img.src}
