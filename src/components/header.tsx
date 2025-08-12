@@ -16,13 +16,15 @@ export default function Header() {
     <header className="bg-white shadow-md sticky top-0 z-50 max-h-20 px-4">
       <div className=" mx-auto px-4 py-4 flex items-center justify-between max-h-20">
         <div className="w-[120px] h-[40px] relative">
-          <Image
-            src="/logo.png"
-            alt="logo"
-            fill
-            priority
-            className="object-contain"
-          />
+          <Link href="/" className="block">
+            <Image
+              src="/logo.png"
+              alt="logo"
+              fill
+              priority
+              className="object-contain cursor-pointer"
+            />
+          </Link>
         </div>
 
         {/* Desktop Nav */}
