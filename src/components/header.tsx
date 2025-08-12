@@ -88,14 +88,14 @@ export default function Header() {
             Products
           </Link>
           <Link
-            href={routes.contact}
+            href={routes.about}
             onClick={closeMenu}
             className="hover:text-primarylight"
           >
             About Us
           </Link>
           <Link
-            href={routes.about}
+            href={routes.contact}
             onClick={closeMenu}
             className="hover:text-primarylight"
           >

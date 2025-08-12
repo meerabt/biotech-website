@@ -21,6 +21,7 @@ const services = [
 ];
 
 const images = [
+  { src: "/carousel/zero.jpg", alt: "Medical Equipment" },
   { src: "/carousel/one.jpg", alt: "Medical Equipment" },
   { src: "/carousel/two.jpg", alt: "Medical Equipment" },
   { src: "/carousel/three.jpg", alt: "Medical Equipment" },
@@ -44,9 +45,9 @@ const Main = () => {
             <Image
               src="/home/lab.jpg"
               alt="Lab"
-              width={800}
-              height={600}
-              className="object-cover w-full sm:h-96 h-62"
+              width={700}
+              height={300}
+              className="object-cover w-full sm:h-60 sm:p-12 bg-white h-40 "
             />
           </div>
         </section>

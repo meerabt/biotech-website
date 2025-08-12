@@ -57,7 +57,7 @@ export default function AboutSection() {
         <AboutBlock
           title="Medical technical service"
           description="Medical technical service for
-hospitals, laboratories, research facilities, clinics
+hospitals, laboratories, research facilities, industrial
 Bio-Tech technical services provides certified, high-quality medical technical service to various types of companies within the healthcare sector. We carry out a wide range of services, including installations, annual maintenance, repairs, calibrations, and verifications. In addition, we supply and sell original spare parts. Our employees are known for their excellent technical skills and expertise. We value good communication and teamwork, which form the foundation of a great customer experience. We always offer fast response times and high-quality service."
           imageSrc="/about/medical.jpg"
           imageAlt="Lab Technician Working"
@@ -75,7 +75,7 @@ Most laboratory equipment requires regularly performed maintenance to ensure tha
         <AboutBlock
           title="Repair of Laboratory Equipment"
           description="Following the manufacturer recommendations for preventive maintenance, equipment is more reliable to use. In case of equipment malfunction, we are ready to help you onsite as fast as possible. Smaller equipment can also to be sent to our local workshop throughout the Bangalore region. We have local hotline support to help you with the best possible solution."
-          imageSrc="/about/repair'.jpg"
+          imageSrc="/about/repair.jpg"
           imageAlt="Lab Technician Working"
         />
 
