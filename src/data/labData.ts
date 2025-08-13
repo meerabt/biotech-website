@@ -66,6 +66,48 @@ const labEquipments = [
     description:
       "A spectrophotometer is an instrument that measures the amount of light absorbed or transmitted by a sample at specific wavelengths.",
   },
+  {
+    image: "/products/lab/distillation.jpg",
+    title: "Automated Distillation Analyzer",
+    description:
+      "An Automated Distillation Analyzer measures the boiling range of liquids without manual intervention.",
+  },
+  {
+    image: "/products/lab/dryhotair.jpg",
+    title: "Dry Hot Air Oven",
+    description:
+      "The Remi Dry Hot Air Oven dries and sterilizes materials using controlled hot air.",
+  },
+  {
+    image: "/products/lab/Memmert.jpg",
+    title: "Memmert Incubator",
+    description:
+      "The Memmert incubator provides a controlled environment for growing and storing biological samples.",
+  },
+  {
+    image: "/products/lab/naturaloven.jpg",
+    title: "Natural Convention Oven",
+    description:
+      "A natural convection oven heats and circulates air without a fan, using natural air movement for drying or baking.",
+  },
+  {
+    image: "/products/lab/oven.jpg",
+    title: "Vacuum Oven",
+    description:
+      "A vacuum oven removes air and moisture to dry materials at low temperatures.",
+  },
+  {
+    image: "/products/lab/serosep.jpg",
+    title: "Serosep EntericBio Workstation",
+    description:
+      "The Serosep EntericBio Workstation automates testing for gastrointestinal pathogens using molecular methods.",
+  },
+  {
+    image: "/products/lab/vacutherm.jpg",
+    title: "Vacutherm Vacuum Oven",
+    description:
+      "The Vacutherm Vacuum Oven dries heat-sensitive materials under reduced pressure.",
+  },
 ];
 
 export default labEquipments;

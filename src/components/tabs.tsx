@@ -6,7 +6,7 @@ interface TabsProps {
 
 export default function Tabs({ tabs, activeTab, onTabClick }: TabsProps) {
   return (
-    <div className="flex gap-6 border-b border-primarylight mb-8">
+    <div className="flex gap-6 border-b border-primarylight mb-8 overflow-x-auto whitespace-nowrap scrollbar-hide">
       {tabs.map((tab) => (
         <button
           key={tab}

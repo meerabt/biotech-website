@@ -39,15 +39,15 @@ const images = [
 const Main = () => {
   return (
     <div>
-      <main className="bg-primarylight/100 h-auto">
+      <main className="bg-primarylight/100 h-auto ">
         <section className="max-w-7xl mx-auto px-4 py-10">
-          <div className="relative overflow-hidden rounded-lg shadow-2xl">
+          <div className="relative overflow-hidden rounded-lg shadow-2xl h-32 sm:h-48 flex items-center justify-center">
             <Image
               src="/home/lab.jpg"
               alt="Lab"
               width={700}
               height={300}
-              className="object-cover w-full sm:h-60 sm:p-12 bg-white h-40 "
+              className="object-cover object-center w-full sm:h-60 sm:p-12 bg-white"
             />
           </div>
         </section>

@@ -41,29 +41,13 @@ const products = [
       "Browse our collection of scientific instruments, lab tools, and analytical devices designed for research and innovation.",
     tab: "Lab Equipments",
   },
-  // {
-  //   title: "Industrial Equipments ",
-  //   image: "/home/grid/extra1.jpg",
-  //   alt: "Extra Equipment 1",
-  //   description:
-  //     "Providing high-quality industrial and medical equipment along with expert repair and maintenance services.",
-  //   tab: "Extra 1",
-  // },
-  // {
-  //   title: "Arthroscopic Equipments",
-  //   image: "/home/grid/extra2.jpg",
-  //   alt: "Extra Equipment 2",
-  //   description:
-  //     "Offering reliable arthroscopic medical equipment and specialized repair and maintenance services.",
-  //   tab: "Extra 2",
-  // },
   {
-    title: "Vibrator Equipments",
-    image: "/home/grid/vibrator.jpg",
-    alt: "Vibrator",
+    title: "Industrial Equipments",
+    image: "/home/grid/industrial.jpg",
+    alt: "Industrial",
     description:
-      "Offering premium vibrator medical equipment coupled with reliable maintenance and repair services.",
-    tab: "Extra 2",
+      "Providing high-quality industrial and medical equipment along with expert repair and maintenance services.",
+    tab: "Industrial Equipments",
   },
   {
     title: "Pharmaceutical Equipments",
@@ -71,7 +55,23 @@ const products = [
     alt: "Pharmaceutical",
     description:
       "Supplying reliable pharmaceutical medical equipment with professional maintenance and repair services.",
-    tab: "Extra 2",
+    tab: "Pharmaceutical Equipments",
+  },
+  {
+    title: "Vibrator Equipments",
+    image: "/home/grid/vibrator.jpg",
+    alt: "Vibrator",
+    description:
+      "Offering premium vibrator medical equipment coupled with reliable maintenance and repair services.",
+    tab: "Vibrator Equipments",
+  },
+  {
+    title: "Arthroscopic Equipments",
+    image: "/home/grid/arthroscopic.jpg",
+    alt: "Arthroscopic",
+    description:
+      "Offering reliable arthroscopic medical equipment and specialized repair and maintenance services.",
+    tab: "Arthroscopic Equipments",
   },
 ];
 

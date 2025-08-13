@@ -81,10 +81,10 @@ export default function RootLayout({
           content="xhhkl7flUMFA2KmTf3GBb-pLAxIZfiYI6oQSejwlLr4"
         />
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1 " />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <Header />
         {children}
