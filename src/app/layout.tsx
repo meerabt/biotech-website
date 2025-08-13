@@ -76,6 +76,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" type="image/png" href="/favicon.png" />
         <meta
           name="google-site-verification"
           content="xhhkl7flUMFA2KmTf3GBb-pLAxIZfiYI6oQSejwlLr4"
