@@ -24,8 +24,8 @@ export const metadata: Metadata = {
     "industrial equipment maintenance",
     "medical devices",
     "Bio-tech Technical Services",
-    "Kochi medical services",
-    "Kerala lab equipment",
+    "Karnataka medical services",
+    "Lab equipment",
     "Bangalore medical equipments",
     "Best medical equipment services",
     "Best science lab equipments",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title:
       "Bio-tech Technical Services | Medical Equipment Repair & Service | Laboratary Equipment Repair & Service ",
     description:
-      "Expert repair and maintenance services for medical, laboratory, and industrial equipment in Kochi, Kerala.",
+      "Expert repair and maintenance services for medical, laboratory, and industrial equipment in Bangalore, Karnataka.",
     url: "https://biotechtechnical.com",
     siteName: "Bio-tech Technical Services",
     images: [
