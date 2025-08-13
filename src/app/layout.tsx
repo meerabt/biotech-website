@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: "Bio-tech Technical Services",
     images: [
       {
-        url: "https://biotechtechnical.com/lab.jpg",
+        url: "https://biotechtechnical.com/logo.png",
         width: 1200,
         height: 630,
         alt: "Bio-tech Technical Services",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Bio-tech Technical Services | Medical Equipment Repair & Service",
     description:
       "Expert repair and maintenance services for medical, laboratory, and industrial equipment.",
-    images: ["https://biotechtechnical.com/lab.jpg"],
+    images: ["https://biotechtechnical.com/logo.png"],
     creator: "@YourTwitterHandle",
   },
   metadataBase: new URL("https://biotechtechnical.com"),

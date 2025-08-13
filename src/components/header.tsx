@@ -18,7 +18,7 @@ export default function Header() {
         <div className="w-[120px] h-[40px] relative">
           <Link href="/" className="block">
             <Image
-              src="/logo.png"
+              src="/header/logo.png"
               alt="logo"
               fill
               priority
